@@ -7,11 +7,29 @@ public class Problem3Test {
     @Test
     public void catchTheBugInBook() {
         // quiz
+        BookFiction p1 = new BookFiction("t1", "au1", "g1");
+        BookFiction p2 = new BookFiction(p1);
+
+        //change title and author of p2, but not ID
+        p2.setTitle("t3");
+        p2.setAuthor("au3");
+
+        assert(p1.equals(p2));
+
     }
 
     @Test
     public void catchTheBugInMovie() {
         // quiz
+        MovieAction p1 = new MovieAction("t1", "au1");
+        MovieAction p2 = new MovieAction(p1);
+
+        //change title and author of p2, but not ID
+        p2.setTitle("t3");
+        p2.setAuthor("au3");
+
+        assert(p1.equals(p2));
+
     }
 
     // DO NOT REMOVE OR CHANGE ANYTHING BELOW THIS!
